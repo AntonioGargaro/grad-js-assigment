@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans:300,300i,400,400i,700&display=swap");
+
+:root {
+	--bmr-dark-100: #334256;
+	--bmr-dark-90: #3d4e66;
+	--bmr-dark-80: #576880;
+	--bmr-dark-70: #718196;
+	--bmr-dark-60: #8c9aad;
+	--bmr-dark-50: #a9b5c7;
+	--bmr-dark-40: #c8d1de;
+	--bmr-dark-30: #dde3ed;
+	--bmr-dark-20: #edf2f7;
+	--bmr-dark-10: #fafcff;
+	--bmr-blue: #4588dd;
+	--bmr-blue--darker: #4280d1;
+	--bmr-purple: #806ded;
+	--bmr-purple--darker: #7866e0;
+	--bmr-aqua: #50aac8;
+	--bmr-aqua--darker: #4a9fbb;
+	--bmr-green: #46a682;
+	--bmr-green--darker: #3d9675;
+	--bmr-yellow: #efb530;
+	--bmr-yellow--darker: #e0ab2d;
+
+	--serif: "Merriweather", serif;
+	--sans-serif: "Merriweather Sans", sans-serif;
+
+	/* taken from here https://type-scale.com */
+	--xxxxs: 0.168rem;
+	--xxxs: 0.512rem;
+	--xxs: 0.64rem;
+	--xs: 0.8rem;
+	--s: 1rem;
+	--m: 1.25rem;
+	--l: 1.563rem;
+	--xl: 1.953rem;
+	--xxl: 2.441rem;
+	--xxxl: 5.96rem;
+}
+
+body,
+input,
+select,
+button,
+textarea {
+	margin: 0;
+	font-family: "Merriweather", serif;
+}
+
+code {
+	/* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
+}
+
+html {
+	scroll-behavior: smooth;
+}
