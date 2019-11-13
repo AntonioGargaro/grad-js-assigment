@@ -3,7 +3,7 @@ const router = require("./router.js");
 const app = express();
 
 const bodyParser = require("./middleware/bodyParser");
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 
 app.use(bodyParser);
 router(app);

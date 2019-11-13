@@ -1,0 +1,48 @@
+.form-field {
+    margin-top: var(--l);
+}
+
+.form-field:first-of-type {
+    margin-top: var(--m);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--m);
+}
+
+.input {
+    border: none;
+    border: 0.0625rem solid var(--bmr-dark-60);
+    border-radius: 0.25rem;
+    padding: var(--s);
+    font-size: var(--m);
+    margin-top: var(--s);
+}
+
+.textarea {
+    resize: none;
+}
+
+.select {
+    background: white;
+    font-style: oblique;
+    font-size: var(--s);
+}
+
+.redborder {
+    border: 0.0625rem solid indianred;
+}
+
+.greenborder {
+    border: 0.0625rem solid rgb(23, 172, 115);
+}
+
+.warning {
+    color: indianred;
+    font-size: var(--m);
+    margin: 0;
+    margin-top: 0.25rem;
+    font-family: var(--serif);
+}
