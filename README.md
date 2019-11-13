@@ -6,7 +6,7 @@
 
 ## Overview
 
-We were tasked with creating a job search engine that could find jobs in a city a user was looking for. This app would require auto completing suggestions of city names.
+We were tasked with creating a job search engine that could find jobs in a city a user was looking for. This app would require auto completing suggestions of city names. A public API for a job site is required to gather data.
 
 
 ## who are we building this app for? What are our goals and motivations?
