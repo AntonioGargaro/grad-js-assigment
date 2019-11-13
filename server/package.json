@@ -1,0 +1,32 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "NODE_ENV=test tape */test/**.test.js | tap-spec",
+        "start": "nodemon app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@hapi/boom": "^8.0.1",
+        "express": "^4.17.1",
+        "express-formidable": "^1.2.0",
+        "http-errors": "^1.7.3",
+        "joi": "^14.3.1",
+        "mongodb": "^3.3.3",
+        "nodemon": "^1.19.4",
+        "pino": "^5.13.5",
+        "pino-http": "^4.3.0",
+        "pino-pretty": "^3.3.0",
+        "tap-spec": "^5.0.0",
+        "tape": "^4.11.0"
+    },
+    "devDependencies": {
+        "dotenv": "^8.2.0",
+        "eslint": "^6.6.0",
+        "mocha": "^6.2.2",
+        "supertest": "^4.0.2"
+    }
+}

@@ -1,0 +1,38 @@
+.large {
+	font-size: var(--xxl);
+	color: #333;
+}
+
+.medium {
+	font-size: var(--l);
+}
+
+.sans {
+	font-family: var(--sans-serif);
+}
+
+.monday {
+	background: lightpink;
+	width: fit-content;
+}
+
+.tuesday {
+	background: lightgreen;
+	width: fit-content;
+}
+.wednesday {
+	background: lightsalmon;
+	width: fit-content;
+}
+.thursday {
+	background: lightblue;
+	width: fit-content;
+}
+.friday {
+	background: lightgoldenrodyellow;
+	width: fit-content;
+}
+
+.centered {
+	text-align: center;
+}
