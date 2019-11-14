@@ -1,5 +1,5 @@
-const getCities = require("./handlers/cities/getCities.js");
+const getJobsByCity = require("./handlers/jobs/getJobsByCity.js");
 
 module.exports = (app) => {
-    app.get("/cities", getCities);
+    app.get("/getJobsByCity", getJobsByCity);
 };
