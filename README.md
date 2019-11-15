@@ -1,9 +1,5 @@
 # Project Week 10 (Antonio)
 
-> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-![Landing page screenshot](/client/landingpage.png?raw=true "Optional Title")
-
 ## Overview
 
 We were tasked with creating a job search engine that could find jobs in a city a user was looking for. This app would require auto completing suggestions of city names. A public API for a job site is required to gather data.
@@ -17,13 +13,27 @@ TODO
 
 ## available endpoints
 
-- get("/cities")
+- get("/getJobsByCity?city=London")
 
 
 ## User Stories
 TODO
 
-## Available Scripts
+## Technology Stack
+
+### Server
+The server is an express.js server which handles routes, middleware and external api calls. The server runs in Docker which is started through docker-compose which is discussed further in the readme.
+
+### Client
+The client is bootstraped from [Create React App](https://github.com/facebook/create-react-app) and is used to serve the UI and makes API calls to the server. The react app runs in Docker and is started through docker-compose which is discussed further in the readme.
+
+## To Run this App
+
+To start this app, you first must clone this repo and cd into the project root.
+Then, `cd server` to enter the server directory and create a `.env` file with `touch .env`, then open this file.
+
+An environment variable `CLIENT_AUTH_KEY={AUTH_KEY}` must be added here with `{AUTH_KEY}` replaced by an api key retrieved from [reed's developer page](https://www.reed.co.uk/developers/jobseeker). Click the `Sign up for a reed.co.uk API Key` and follow the instructions for an API key.
+You can now cd back to the project directory with `cd ..`.
 
 In the project directory, you can run:
 
@@ -35,17 +45,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+## To run tests
+cd into either `client` or `server` folder and run
+
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+This launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
