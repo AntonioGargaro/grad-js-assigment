@@ -18,7 +18,6 @@
     border-radius: 0.25rem;
     padding: var(--s);
     font-size: var(--m);
-    margin-top: var(--s);
 }
 
 .textarea {

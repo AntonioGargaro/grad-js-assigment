@@ -84,7 +84,9 @@ const CitySearchForm = ({
                     isError={inputError}
                 />
             </div>
-            <input type="submit" />
+            <button id={"searchCity"} type="submit">
+                Search
+            </button>
         </form>
     );
 };
