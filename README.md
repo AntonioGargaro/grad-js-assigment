@@ -6,7 +6,7 @@ We were tasked with creating a job search engine that could find jobs in a city 
 
 
 ## who are we building this app for? What are our goals and motivations?
-TODO
+This assignment is catered towards aspiring job applicants, who want to find out the latest relevant jobs in the area.
 
 
 ## To Run this App
@@ -36,7 +36,41 @@ You will also see any lint errors in the console.
 
 
 ## User Stories
-TODO
+As a USER
+I want to SEARCH FOR JOBS AVAILABLE IN MY CITY
+so that I CAN BROWSE AND APPLY FOR JOBS RELEVANT TO MY AREA.
+
+AC:
+* I can see a text box to enter my city.
+* I can see an autocomplete dropdown of suggested cities when I am typing.
+* If I enter an invalid city, I am prompted clearly how to correct my search input.
+* I can see clearly how to submit my search.
+* I can see clearly all the jobs available in my area.
+* For each job I can see the job title and the company.
+* For each job, there is a button that takes me to the original site where the job was listed. 
+
+
+As a DEVELOPER
+I need MY PROJECT TO HAVE ADEQUATE TEST COVERAGE 
+so that I CAN CONFIRM THAT MY CODE WORKS AS EXPECTED.
+
+AC
+* Unit testing is in place for logic functions where possible
+* Client-side has integration tests where needed to test behaviour of the application
+* API calls are mocked on the front-end
+* External API calls are mocked on the back-end
+* My API endpoints are tested
+
+
+As a DEVELOPER,
+I want MY APP TO HAVE GOOD DOCUMENTATION,
+so that MY APP CAN BE EASILY RUN AND TESTED BY OTHER DEVELOPERS.
+
+AC
+* The documentation describes the functionality of the app.
+* The documentation includes installation instructions.
+* The documentation lists any dependencies that need to be manually installed.
+* The documentation describes how to run tests on the app.
 
 ## Technology Stack
 
@@ -50,3 +84,4 @@ To check tests on the server, type `npm i && jest --coverage` in the server dire
 The client is bootstraped from [Create React App](https://github.com/facebook/create-react-app) and is used to serve the UI and makes API calls to the server. The react app runs in Docker and is started through docker-compose which is discussed further in the readme.
 
 
+To check tests on the client, type `npm i && jest --coverage` in the client directory.
