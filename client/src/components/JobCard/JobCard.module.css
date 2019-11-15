@@ -2,6 +2,7 @@
     border-radius: var(--xxs);
     background: var(--bmr-dark-10);
     display: flex;
+    max-width: 100%;
     flex-grow: 1;
     flex-basis: 33%;
     border: 0.0625rem solid var(--bmr-dark-40);
@@ -44,12 +45,6 @@
     justify-content: space-between;
 }
 
-@media (max-width: 800px) {
-    .card {
-        width: 100%;
-        margin-right: 0rem;
-    }
-}
 @media (max-width: 400px) {
     .header {
         font-size: var(--xs);

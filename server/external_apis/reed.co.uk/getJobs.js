@@ -13,7 +13,13 @@ const getJobs = async (location) => {
             ...authorization
         });
     } catch (err) {
-        console.error(err);
+        if (err === TypeError) {
+            let customTypeError = new TypeError(
+                "No authorization key set, request will 401"
+            );
+            customTypeError.status = 401;
+            throw customTypeError;
+        }
     }
 };
 
