@@ -2,11 +2,19 @@ const getJobs = require("../../external_apis/reed.co.uk/getJobs");
 
 const getJobsByCity = async (req, res) => {
     try {
+        if (req.query.city === undefined)
+            throw new TypeError("City param missing");
+
         let city = escape(req.query.city);
-        let jobs = (await getJobs(city)).data;
-        res.status(200).json(jobs);
+        let jobs = await getJobs(city);
+        let jobsData = jobs.data;
+        res.status(200).json(jobsData);
     } catch (err) {
-        res.status(404).json(err.message);
+        if (err instanceof TypeError && err.status === 401) {
+            res.status(err.status).json(err.message);
+            return;
+        }
+        res.status(422).json(err.message);
     }
 };
 
