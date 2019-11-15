@@ -10,8 +10,6 @@ import JobCard from "../../components/JobCard";
 import axios from "axios";
 
 function closeAllLists(elmnt) {
-    /*close all autocomplete lists in the document,
-    except the one passed as an argument:*/
     const allAutocompleteItems = document.getElementsByClassName(
         "autocomplete-items"
     );
@@ -33,7 +31,7 @@ const OverviewPage = () => {
 
     // Conditonals
 
-    const isInputValueNotBlank = inputValue !== "";
+    const inputValueNotBlank = inputValue !== "";
     const jobsDataIsPopulated = jobsData.length > 0;
 
     useEffect(() => {
@@ -41,16 +39,16 @@ const OverviewPage = () => {
     }, [jobsData]);
 
     useEffect(() => {
-        if (isInputValueNotBlank) {
+        if (inputValueNotBlank) {
             let matchingCities = getCitySuggestions(inputValue);
             setCitiesData(matchingCities);
         }
-    }, [inputValue, isInputValueNotBlank]);
+    }, [inputValue, inputValueNotBlank]);
 
     useEffect(() => {
         closeAllLists();
 
-        if (isInputValueNotBlank) {
+        if (inputValueNotBlank) {
             let cityInput = document.getElementById("City");
             let autoCompleteList = document.createElement("DIV");
 
@@ -68,7 +66,7 @@ const OverviewPage = () => {
             let autoCompleteLimit = 5;
 
             citiesData.some((cityObj, i) => {
-                if (i >= 5) return true;
+                if (i >= autoCompleteLimit) return true;
                 let city = cityObj.city;
                 if (city === inputValue) return true;
 
@@ -90,9 +88,10 @@ const OverviewPage = () => {
                     clickOnSuggestionHandler
                 );
                 autoCompleteList.appendChild(matchedCities);
+                return false;
             });
         }
-    }, [citiesData, inputValue, isInputValueNotBlank]);
+    }, [citiesData, inputValue, inputValueNotBlank]);
 
     // Handler callbacks
 
