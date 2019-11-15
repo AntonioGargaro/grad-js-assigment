@@ -6,7 +6,7 @@ const autocompleteCitySuggestion = (city) => {
 
 export default autocompleteCitySuggestion;
 
-const cities = [
+export const cities = [
     {
         city: "London",
         admin: "",

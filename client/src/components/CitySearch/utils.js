@@ -28,14 +28,9 @@ const populateAutocomplete = (
             if (city === inputValue) return true;
 
             let matchedCities = document.createElement("DIV");
-
-            let matchedLetters =
-                "<strong>" + city.substr(0, inputValue.length) + "</strong>";
-            let otherLetters = city.substr(inputValue.length);
             let hiddenInputValue = "<input type='hidden' value='" + city + "'>";
 
-            matchedCities.innerHTML =
-                matchedLetters + otherLetters + hiddenInputValue;
+            matchedCities.innerHTML = city + hiddenInputValue;
 
             matchedCities.addEventListener("click", clickOnSuggestionHandler);
             autoCompleteList.appendChild(matchedCities);
